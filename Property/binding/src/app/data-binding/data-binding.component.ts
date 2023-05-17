@@ -5,14 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './data-binding.component.html',
   styleUrls: ['./data-binding.component.css']
 })
-export class DataBindingComponent implements OnInit{
-onKeyUp() {
-throw new Error('Method not implemented.');
-}
+export class DataBindingComponent implements OnInit {
 
   url: string = "https://jonathasrosa.github.io/CV-Online/";
   cursoAngular: boolean = true;
   urlImagem = 'http://lorempixel.com/400/200/nature/';
+  valorAtual: string = '';
+  valorSalvo: string = '';
 
   getValor(){
     return 1;
@@ -26,12 +25,15 @@ throw new Error('Method not implemented.');
     alert('Botão clicado!')
   }
   
-  onKeyUp(evento){
-  
+  onKeyUp(evento: KeyboardEvent){
+  this.valorAtual = ((<HTMLInputElement>evento.target).value)
+  }
+
+  salvarValor(valor: string){
+    this.valorSalvo = valor;
   }
 
   constructor() {};
-
   ngOnInit() {
 
   };
