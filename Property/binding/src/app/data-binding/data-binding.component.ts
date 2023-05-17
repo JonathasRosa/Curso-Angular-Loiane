@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-binding.component.css']
 })
 export class DataBindingComponent implements OnInit{
+onKeyUp() {
+throw new Error('Method not implemented.');
+}
 
   url: string = "https://jonathasrosa.github.io/CV-Online/";
   cursoAngular: boolean = true;
@@ -16,7 +19,15 @@ export class DataBindingComponent implements OnInit{
   }
 
   getCurtirCurso(){
-return true;
+    return true;
+  }
+
+  botaoClicado(){
+    alert('Botão clicado!')
+  }
+  
+  onKeyUp(evento){
+  
   }
 
   constructor() {};

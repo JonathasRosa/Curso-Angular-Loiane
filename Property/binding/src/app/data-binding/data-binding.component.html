@@ -34,4 +34,12 @@
         <div class="alert" role="alert" [class.alert-danger]="class.value == 'alert-danger'">Erro!</div>
         <div class="alert alert-danger" role="alert" [style.display]="class.value == 'alert-danger' ? 'block' : 'none'">Esse testo somente aparece em caso de erro</div>
     </article>
+
+    <article class="event-binding">
+        <h3>Event binding</h3>
+        <div>
+            <button (click)="botaoClicado()" class="btn btn-primary">Me click!</button><br>
+            <input type="text" (keyup)="onKeyUp($event)"/>
+        </div>
+    </article>
 </section>
