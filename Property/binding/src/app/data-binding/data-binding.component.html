@@ -1,4 +1,5 @@
 <section>
+    <!--
     <article>
         <h3>Interpolation</h3>
         <p>String renderizada com interpolação: {{ url }}</p>
@@ -32,15 +33,14 @@
         <div class="alert" role="alert" [class.alert-info]="class.value == 'alert-info'">Info!</div>
         <div class="alert" role="alert" [class.alert-warning]="class.value == 'alert-warning'">Alerta!</div>
         <div class="alert" role="alert" [class.alert-danger]="class.value == 'alert-danger'">Erro!</div>
-        <div class="alert alert-danger" role="alert" [style.display]="class.value == 'alert-danger' ? 'block' : 'none'">Esse testo somente aparece em caso de erro</div>
+        <div class="alert alert-danger" role="alert" [style.display]="class.value == 'alert-danger' ? 'block' : 'none'">Esse texto somente aparece em caso de erro</div>
     </article>
-
+-->
     <article class="event-binding">
         <h3>Event binding</h3>
         <div>
             <button (click)="botaoClicado()" class="btn btn-primary">Me click!</button><br>
-            <input type="text" (keyup)="onKeyUp($event)" (keyup.enter)="salvarValor($event.target.value)"/>
-            <p>Valor atual: {{ valorAtual }}</p>
+            
         </div>
     </article>
 </section>
